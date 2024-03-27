@@ -1,12 +1,41 @@
-import logo from "../images/BS_Primary_Signature_White_RGB.png";
+import logo from "../images/Group 11.png";
 import React, { useState } from "react";
 
 function Age() {
   const [birthYear, setBirthYear] = useState("");
-  const isAllowed = parseInt(birthYear) < 2003;
+  const [birthMonth, setBirthMonth] = useState("");
+  const [showMonthInput, setShowMonthInput] = useState(false);
+  const currentYear = new Date().getFullYear();
+  const currentMonth = new Date().getMonth() + 1;
+  const yearNoAllowed = currentYear - 18;
+  const [errorMessage, setErrorMessage] = useState("");
+
+ const handleAgreeClick = () => {
+   const birthYearNumber = parseInt(birthYear);
+   const birthMonthNumber = parseInt(birthMonth);
+   console.log("month", birthMonthNumber)
+   console.log(birthYearNumber)
+
+   if (
+     birthYearNumber > yearNoAllowed ||
+     (birthYearNumber === yearNoAllowed && birthMonthNumber > currentMonth)
+   ) {
+     setErrorMessage("Unfortunately you are not old enough yet");
+     setTimeout(() => {
+       console.log("this is the first message");
+       window.location.href = "http://responsibledrinking.org/";
+     }, 5000);
+   } else if (birthYearNumber === yearNoAllowed && birthMonthNumber === currentMonth) {
+   } else if (birthYearNumber === yearNoAllowed) {
+     setShowMonthInput(true);
+     setErrorMessage("");
+   }
+ };
+
+
   return (
     <div className="w-screen h-screen bg-cyan-400 text-center pt-3 flex flex-col items-center">
-      <img src={logo} alt="" className="w-64" />
+      <img src={logo} alt="logo" className="w-64" />
       <div className="w-full flex justify-center">
         <p className="text-white text-sm font-sapphire font-weight-400 p-2 w-5/6">
           YOU MUST BE OF LEGAL AGE FOR PURCHASING AND CONSUMING ALCOHOL TO ENTER
@@ -18,25 +47,37 @@ function Age() {
         <p className="text-cyan-400 text-[32px] font-bombay">
           PLEASE ENTER YOUR YEAR OF BIRTH
         </p>
-        <input
-          type="text"
-          name="age"
-          className="text-slate-500 text-[27px] font-bombay my-5 w-2/6 text-center"
-          placeholder="YYYY"
-          required
-          value={birthYear}
-          onChange={(e) => {
-            setBirthYear(e.target.value);
-            console.log(birthYear);
-          }}
-        />
 
-        {!isAllowed &&
-          birthYear !== "" && ( // Show message only if birthYear is less than or equal to 2003
-            <p className="text-red-500 text-xl font-bombay">
-              You are not of legal age.
-            </p>
+        <div>
+          {showMonthInput && (
+            <input
+              type="text"
+              name="month"
+              className="text-slate-500 text-[27px] font-bombay my-5 w-2/6 text-center"
+              placeholder="MM  /"
+              required
+              value={birthMonth}
+              onChange={(e) => {
+                setBirthMonth(e.target.value);
+              }}
+            />
           )}
+          <input
+            type="text"
+            name="age"
+            className="text-slate-500 text-[27px] font-bombay my-5 w-2/6 text-center"
+            placeholder="YYYY"
+            required
+            value={birthYear}
+            onChange={(e) => {
+              setBirthYear(e.target.value);
+            }}
+          />
+        </div>
+
+        {errorMessage && (
+          <p className="text-cyan-400 text-xl font-bombay">{errorMessage}</p>
+        )}
 
         <p className="text-cyan-400 font-sapphire text-sm mt-2 w-5/6">
           WE USE TRACKING AND OTHER COOKIES
@@ -65,13 +106,14 @@ function Age() {
         <div className="w-full mt-12 flex justify-center">
           <button
             type="button"
-            class="text-cyan-400 font-sapphire white border border-cyan-400 font-medium rounded-full text-lg px-6 py-2.5 text-center me-2 mb-2"
+            className="text-cyan-400 font-sapphire white border border-cyan-400 font-medium rounded-full text-lg px-6 py-2.5 text-center me-2 mb-2"
           >
             MANAGE
           </button>
           <button
             type="button"
-            class="text-white bg-cyan-400 font-sapphire font-medium rounded-full text-lg px-6 py-2.5 text-center me-2 mb-2"
+            onClick={handleAgreeClick}
+            className="text-white bg-cyan-400 font-sapphire font-medium rounded-full text-lg px-6 py-2.5 text-center me-2 mb-2"
           >
             AGREE
           </button>
