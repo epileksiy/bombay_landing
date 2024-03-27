@@ -1,4 +1,4 @@
-import logo from "../images/Group 11.png";
+import logo from "../images/logo.png";
 import React, { useState } from "react";
 
 function Age() {
