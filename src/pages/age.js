@@ -4,38 +4,50 @@ import React, { useState } from "react";
 function Age() {
   const [birthYear, setBirthYear] = useState("");
   const [birthMonth, setBirthMonth] = useState("");
+  const [birthDay, setBirthDay] = useState("");
   const [showMonthInput, setShowMonthInput] = useState(false);
+  const [showDayInput, setShowDayInput] = useState(false);
   const currentYear = new Date().getFullYear();
   const currentMonth = new Date().getMonth() + 1;
+  const currentDay = new Date().getDate();
   const yearNoAllowed = currentYear - 18;
   const [errorMessage, setErrorMessage] = useState("");
 
  const handleAgreeClick = () => {
    const birthYearNumber = parseInt(birthYear);
    const birthMonthNumber = parseInt(birthMonth);
-   console.log("month", birthMonthNumber)
-   console.log(birthYearNumber)
+   const birthDayNumber = parseInt(birthDay);
+   console.log(birthDayNumber);
+   console.log(currentDay);
 
    if (
      birthYearNumber > yearNoAllowed ||
-     (birthYearNumber === yearNoAllowed && birthMonthNumber > currentMonth)
+     (birthYearNumber === yearNoAllowed && birthMonthNumber > currentMonth) ||
+     (birthYearNumber === yearNoAllowed && birthMonthNumber === currentMonth && birthDayNumber >= currentDay)
    ) {
      setErrorMessage("Unfortunately you are not old enough yet");
      setTimeout(() => {
        console.log("this is the first message");
        window.location.href = "http://responsibledrinking.org/";
      }, 5000);
-   } else if (birthYearNumber === yearNoAllowed && birthMonthNumber === currentMonth) {
+   } else if (
+     birthYearNumber === yearNoAllowed &&
+     birthMonthNumber === currentMonth
+   ) {
+     setShowDayInput(true);
+     setErrorMessage("");
    } else if (birthYearNumber === yearNoAllowed) {
      setShowMonthInput(true);
      setErrorMessage("");
+   } else {
+    console.log("Go next page")
    }
  };
 
 
   return (
     <div className="w-screen h-screen bg-cyan-400 text-center pt-3 flex flex-col items-center">
-      <img src={logo} alt="logo" className="w-64" />
+      <img src={logo} alt="logo" className="w-64 m-4" />
       <div className="w-full flex justify-center">
         <p className="text-white text-sm font-sapphire font-weight-400 p-2 w-5/6">
           YOU MUST BE OF LEGAL AGE FOR PURCHASING AND CONSUMING ALCOHOL TO ENTER
@@ -49,6 +61,21 @@ function Age() {
         </p>
 
         <div>
+          {showDayInput && (
+            <input
+              type="text"
+              name="day"
+              className="text-slate-500 text-[27px] font-bombay my-5 w-2/6 text-center"
+              placeholder="DD  /"
+              required
+              min="1"
+              max="31"
+              value={birthDay}
+              onChange={(e) => {
+                setBirthDay(e.target.value);
+              }}
+            />
+          )}
           {showMonthInput && (
             <input
               type="text"
@@ -56,6 +83,8 @@ function Age() {
               className="text-slate-500 text-[27px] font-bombay my-5 w-2/6 text-center"
               placeholder="MM  /"
               required
+              min="1"
+              max="12"
               value={birthMonth}
               onChange={(e) => {
                 setBirthMonth(e.target.value);
