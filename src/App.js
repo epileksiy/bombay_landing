@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Age from "./pages/age";
 import Inspiring from "./pages/inspiring";
 import Home from "./pages/home1";
+import Impressionism from "./pages/impressionism"
+import Impressionism_coctail from "./pages/impressionism_coctail";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Age />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/impressionism" element={<Impressionism />} />
+        <Route path="/impressionism_coctail" element={<Impressionism_coctail />} />
       </Routes>
     </Router>
   );
