@@ -46,7 +46,7 @@ function Age() {
 
 
   return (
-    <div className="w-screen h-screen bg-cyan-400 text-center pt-3 flex flex-col items-center">
+    <div className="w-screen bg-cyan-400 text-center min-h-screen pt-3 flex flex-col items-center">
       <img src={logo} alt="logo" className="w-64 m-4" />
       <div className="w-full flex justify-center">
         <p className="text-white text-sm font-sapphire font-weight-400 p-2 w-5/6">

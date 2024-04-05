@@ -53,7 +53,7 @@ useEffect(() => {
       </div>
 
       <div className="flex overflow-x-scroll pb-10 hide-scroll-bar">
-        <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 items-center">
+        <div className="flex flex-nowrap ml-4 items-center">
           <div className="inline-block px-3">
             <p className="text-white font-bombay text-[58px] leading-none text-center mr-5 w-[294px]">
               CHOOSE INSPIRING ART AND GET YOUR COCKTAILE RECIPE
