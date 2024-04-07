@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Card({data}) {
 
     return (
-      <div className="relative inline-block mr-5">
+      <div className="relative inline-block mx-7">
         <div className="w-[310px] h-[470px] max-w-xs overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
           <Link to="/impressionism">
             <img
