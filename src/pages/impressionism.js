@@ -47,14 +47,14 @@ function Impressionism() {
           <button onClick={() => handleClick(firstDivRef)}>
             <img className="h-[30px] mt-5 ml-4" src={back} alt="back-buttom" />
           </button>
-          <p className="text-white text-m font-sapphire mt-5">COCTAIL</p>
+          <p className="text-white text-m font-sapphire mt-5">COCKTAIL</p>
           <Link to="/home">
             <img className="h-[30px] mt-5 mr-4" src={exit} alt="exit-buttom" />
           </Link>
         </div>
         <div className="w-3/4 mx-auto flex flex-col items-center">
           <p className="text-center text-white font-bombay text-[32px]">
-            IMPRESSIONISM BOMBAY & TONIC
+            IMPRESSIVE BOMBAY & TONIC
           </p>
           <img src={coctail} className="w-[230px] mt-6 mb-8" alt="coctail" />
           <p className="text-white text-m font-sapphire text-center">
