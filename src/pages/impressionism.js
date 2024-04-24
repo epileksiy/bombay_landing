@@ -15,26 +15,30 @@ function Impressionism() {
 
   return (
     <div>
-      <div
-        ref={firstDivRef}
-        className="bg-cover bg-center min-h-screen flex flex-col justify-between"
-        style={{ backgroundImage: `url(${impressionism_full})` }}
-      >
-        <div className="flex justify-between">
+      <div>
+        <div className="fixed top-5 left-5">
           <Link to="/home">
-            <img className="h-[30px] mt-5 ml-4" src={back} alt="back-buttom" />
-          </Link>
-          <Link to="/home">
-            <img className="h-[30px] mt-5 mr-4" src={exit} alt="exit-buttom" />
+            <img className="h-[30px]" src={back} alt="back-button" />
           </Link>
         </div>
+        <div className="fixed top-5 right-5">
+          <Link to="/home">
+            <img className="h-[30px]" src={exit} alt="exit-button" />
+          </Link>
+        </div>
+      </div>
+      <div
+        ref={firstDivRef}
+        className="bg-cover bg-center min-h-screen flex flex-col items-center justify-between"
+        style={{ backgroundImage: `url(${impressionism_full})` }}
+      >
         <div>
-          <p className="text-center text-white font-bombay text-[32px] mb-[500px]">
+          <p className="text-center text-white font-bombay text-[32px] mt-[118px]">
             IMPRESSIONISM
           </p>
         </div>
         <div className="flex justify-center">
-          <button onClick={() => handleClick(coctailRef)}>
+          <button>
             <img className="h-[30px] mb-3" src={exit} alt="swipe-buttom" />
           </button>
         </div>
@@ -43,15 +47,15 @@ function Impressionism() {
         ref={coctailRef}
         className="w-screen h-screen bg-cyan-400 min-h-screen flex flex-col justify-between"
       >
-        <div className="flex justify-between items-center">
-          <button onClick={() => handleClick(firstDivRef)}>
+        {/* <div className="flex justify-between items-center"> */}
+          {/* <button onClick={() => handleClick(firstDivRef)}>
             <img className="h-[30px] mt-5 ml-4" src={back} alt="back-buttom" />
-          </button>
-          <p className="text-white text-m font-sapphire mt-5">COCKTAIL</p>
-          <Link to="/home">
+          </button> */}
+          <p className="text-white text-m text-center font-sapphire mt-[25px]">COCKTAIL</p>
+          {/* <Link to="/home">
             <img className="h-[30px] mt-5 mr-4" src={exit} alt="exit-buttom" />
-          </Link>
-        </div>
+          </Link> */}
+        {/* </div> */}
         <div className="w-3/4 mx-auto flex flex-col items-center">
           <p className="text-center text-white font-bombay text-[32px]">
             IMPRESSIVE BOMBAY & TONIC

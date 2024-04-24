@@ -2,8 +2,7 @@ import React, { useState, useRef } from "react";
 import backgroundImage from "../images/background.png";
 import logo from "../images/logo.png";
 import gif from "../images/01-Swipe left.gif";
-import Card from "../Card";
-import "./home.css";
+import Card from "../Card"; 
 import impressionism from "../images/Impresseonism.png";
 import VisibilitySensor from "react-visibility-sensor";
 import IndicatorDots from './IndicatorDots'
