@@ -15,3 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "bombay";
+  src: url("../public/fonts/bombay.otf");
+}
+
+@font-face {
+  font-family: "sapphire";
+  src: url("../public/fonts/sapphire.otf");
+}
