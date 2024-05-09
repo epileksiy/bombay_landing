@@ -42,7 +42,8 @@ function Age() {
       setShowMonthInput(true);
       setErrorMessage("");
     } else {
-      console.log("Go next page");
+      console.log("Go to AR page :P");
+      window.location.href = "https://playcanv.as/p/cJuPXHyj/";
     }
   };
 
