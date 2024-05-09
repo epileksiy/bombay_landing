@@ -48,7 +48,7 @@ function Age() {
   };
 
   return (
-    <div className="w-screen bg-cyan-400 text-center min-h-screen pt-3 flex flex-col items-center">
+    <div className="w-screen bg-cyan-400 text-center min-h-dvh flex flex-col items-center justify-center">
       <img src={logo} alt="logo" className="w-64 mt-6 mb-4" />
       <div className="w-full flex justify-center">
         <p className="text-white text-sm font-sapphire font-weight-400 mb-3 w-5/6">
@@ -58,7 +58,7 @@ function Age() {
       </div>
 
       <div className="bg-white rounded-xl p-4 w-5/6 flex flex-col items-center">
-        <p className="text-cyan-400 text-[32px] font-bombay leading-none mt-4">
+        <p className="text-cyan-400 text-3xl font-bombay leading-none mt-4">
           PLEASE ENTER YOUR YEAR OF BIRTH
         </p>
 

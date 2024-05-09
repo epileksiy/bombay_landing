@@ -3,10 +3,10 @@ import backgroundImage from "../images/background.png";
 import logo from "../images/logo.png";
 import gif from "../images/01-Swipe left.gif";
 import Card from "../Card"; 
-import impressionism from "../images/Impressionism banner.png";
-import suprematism from "../images/Suprematism banner.png";
-import artnov from "../images/Art Nouveau banner.png";
-import classicism from "../images/Classicism banner.png";
+import impressionism from "../images/impres.png";
+import suprematism from "../images/spreme.png";
+import artnov from "../images/arrt.png";
+import classicism from "../images/classss.png";
 import VisibilitySensor from "react-visibility-sensor";
 import IndicatorDots from './IndicatorDots'
 import { isVisible } from "@testing-library/user-event/dist/utils";
@@ -36,7 +36,7 @@ function Home() {
   return (
     <div
       id="cardsBlock"
-      className="flex flex-col m-auto p-auto bg-cover bg-center min-h-screen justify-between"
+      className="flex flex-col bg-cover bg-center min-h-dvh justify-between"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="flex justify-center">
@@ -47,9 +47,9 @@ function Home() {
         <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 items-center">
 
           <VisibilitySensor onChange={(isVisible) => onChange(isVisible, 0)}>
-            <div className="inline-block px-3">
+            <div className="inline-block">
               <p className="text-white font-bombay text-[58px] leading-none text-center mr-5 w-[294px]">
-                CHOOSE INSPIRING ART AND GET YOUR COCKTAILE RECIPE
+                CHOOSE<br />INSPIRING<br />ART AND<br />GET YOUR<br />COCKTAILE<br />RECIPE
               </p>
             </div>
           </VisibilitySensor>

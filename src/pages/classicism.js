@@ -84,7 +84,7 @@ function Classicism() {
 
       <div
         // ref={coctailRef}
-        className="w-screen min-h-screen bg-cyan-400 flex flex-col justify-between"
+        className="w-screen h-screen bg-cyan-400 flex flex-col justify-between"
       >
         <VisibilitySensor
           onChange={(isVisible) => {
@@ -101,20 +101,20 @@ function Classicism() {
             COCKTAIL
           </p>
         </VisibilitySensor>
-        <div className="w-3/4 mx-auto flex flex-col items-center">
-          <p className="text-center text-white font-bombay text-[32px]">
-            IMPRESSIVE BOMBAY & TONIC
+        <div className="w-3/4 mx-auto flex flex-col items-center justify-between h-full mb-3">
+          <p className="text-center text-white font-bombay text-3xl md:text-4xl mt-10">
+            CLASSIC <br /> BOMBAY & TONIC
           </p>
-          <img src={coctail} className="w-[230px] mt-6 mb-8" alt="coctail" />
-          <p className="text-white text-m font-sapphire text-center">
-            Bombay Sapphire 50 ml<br />
-            Premium Tonic water 100 ml<br />
+          <img src={coctail} className="recptimg" alt="coctail" />
+          <p className="text-white text-m font-sapphire text-center mb-10">
+            BOMBAY SAPPHIRE 50 ml<br />
+            Premium tonic water 100 ml<br />
             Lime wedge<br />
             Ice
           </p>
         </div>
         <div className="flex justify-center">
-        <a
+          <a
             onClick={handleDownload}
             className="text-white text-[24px] font-sapphire white border border-white font-medium rounded-full text-lg px-6 py-2.5 text-center mb-4"
           >

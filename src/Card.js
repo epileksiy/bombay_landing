@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 
 function Card({data}) {
 
+    const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+    useEffect(() => {
+      const handleResize = () => setWindowHeight(window.innerHeight);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
-      <div className="relative inline-block mx-7">
-        <div className="w-[310px] h-[470px] max-w-xs overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
+      <div className="relative inline-block mx-12">
+        <div className="card-container shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
           <Link to={data.link}>
             <img
-              className="rounded-xl"
+              className="card-image rounded-lg"
               src={data.imageURL}
               alt="impressionism"
             />
