@@ -1,0 +1,17 @@
+.card-container {
+    width: calc(33.33vh); /* 1/3 of viewport width minus margins */ /* Квадратный аспект-рацио */
+  }
+  
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .recptbanner {
+    font-size: ;
+} */
+
+.recptimg {
+    width: calc(33.33vh/1.1);
+}

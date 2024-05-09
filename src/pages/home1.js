@@ -3,7 +3,10 @@ import backgroundImage from "../images/background.png";
 import logo from "../images/logo.png";
 import gif from "../images/01-Swipe left.gif";
 import Card from "../Card"; 
-import impressionism from "../images/Impresseonism.png";
+import impressionism from "../images/impres.png";
+import suprematism from "../images/spreme.png";
+import artnov from "../images/arrt.png";
+import classicism from "../images/classss.png";
 import VisibilitySensor from "react-visibility-sensor";
 import IndicatorDots from './IndicatorDots'
 import { isVisible } from "@testing-library/user-event/dist/utils";
@@ -15,25 +18,25 @@ function Home() {
   const cardRefs = useRef([]);
 
   const data = [
-    { name: "IMPRESSIONISM", imageURL: impressionism },
-    { name: "SUPREMATISM", imageURL: impressionism },
-    { name: "ART NOUVEAU", imageURL: impressionism },
-    { name: "CLASSICISM", imageURL: impressionism },
+    { name: "IMPRESSIONISM", imageURL: impressionism , link:"/impressionism"},
+    { name: "SUPREMATISM", imageURL: suprematism , link:"/suprematism"},
+    { name: "ART NOUVEAU", imageURL: artnov , link:"/artnouveau"},
+    { name: "CLASSICISM", imageURL: classicism , link:"/classicism"},
   ];
 
   function onChange (isVisible, index) {
-    console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
+    // console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
     setcardView(isVisible);
     if (isVisible) {
       setActiveCardIndex(index);
-      console.log(index);
+      // console.log(index);
     }
   }
 
   return (
     <div
       id="cardsBlock"
-      className="flex flex-col m-auto p-auto bg-cover bg-center min-h-screen justify-between"
+      className="flex flex-col bg-cover bg-center min-h-dvh justify-between"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="flex justify-center">
@@ -44,9 +47,9 @@ function Home() {
         <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 items-center">
 
           <VisibilitySensor onChange={(isVisible) => onChange(isVisible, 0)}>
-            <div className="inline-block px-3">
+            <div className="inline-block">
               <p className="text-white font-bombay text-[58px] leading-none text-center mr-5 w-[294px]">
-                CHOOSE INSPIRING ART AND GET YOUR COCKTAILE RECIPE
+                CHOOSE<br />INSPIRING<br />ART AND<br />GET YOUR<br />COCKTAILE<br />RECIPE
               </p>
             </div>
           </VisibilitySensor>

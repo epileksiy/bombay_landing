@@ -42,12 +42,13 @@ function Age() {
       setShowMonthInput(true);
       setErrorMessage("");
     } else {
-      console.log("Go next page");
+      console.log("Go to AR page :P");
+      window.location.href = "https://playcanv.as/p/cJuPXHyj/";
     }
   };
 
   return (
-    <div className="w-screen bg-cyan-400 text-center min-h-screen pt-3 flex flex-col items-center">
+    <div className="w-screen bg-cyan-400 text-center min-h-dvh flex flex-col items-center justify-center">
       <img src={logo} alt="logo" className="w-64 mt-6 mb-4" />
       <div className="w-full flex justify-center">
         <p className="text-white text-sm font-sapphire font-weight-400 mb-3 w-5/6">
@@ -57,7 +58,7 @@ function Age() {
       </div>
 
       <div className="bg-white rounded-xl p-4 w-5/6 flex flex-col items-center">
-        <p className="text-cyan-400 text-[32px] font-bombay leading-none mt-4">
+        <p className="text-cyan-400 text-3xl font-bombay leading-none mt-4">
           PLEASE ENTER YOUR YEAR OF BIRTH
         </p>
 
@@ -131,19 +132,19 @@ function Age() {
             >
               TERMS AND CONDITIONS
             </a>
-            ENJOY BOMBAY SAPPHIRE RESPONSIBLY. FOR INFORMATION ABOUT ALCOHOL
-            RESPONSIBILITY VISIT
-            <a
+            <p>ENJOY BOMBAY SAPPHIRE RESPONSIBLY. </p>
+            <p>FOR INFORMATION ABOUT ALCOHOL RESPONSIBILITY. </p>
+            <p><a
               href="http://responsibledrinking.org/"
               className="text-white font-sapphire text-sm p-2 underline"
             >
-              RESPONSIBLEDRINKING.ORG
-            </a>
+              VISIT RESPONSIBLEDRINKING.ORG.
+            </a></p>
           </p>
         </div>
 
         <p className="text-white font-sapphire text-[10px] p-2 w-3/4">
-          © 2024 BOMBAY, BOMBAY SAPPHIRE. STAR OF BOMBAY AND THEIR RESPECTIVE
+          © 2024 BOMBAY, BOMBAY SAPPHIRE, STAR OF BOMBAY AND THEIR RESPECTIVE
           TRADE DRESSES ARE TRADEMARKS.
         </p>
         <a
