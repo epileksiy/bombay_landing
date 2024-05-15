@@ -44,11 +44,7 @@ function Impressionism() {
         <div className="fixed top-5 left-5">
           {cocktailVisible ? (
             <button onClick={() => handleClick(firstDivRef)}>
-              <img
-                className="h-[30px]"
-                src={back}
-                alt="back-button-scroll"
-              />
+              <img className="h-[30px]" src={back} alt="back-button-scroll" />
             </button>
           ) : (
             <Link to="/home">
@@ -68,7 +64,7 @@ function Impressionism() {
         style={{ backgroundImage: `url(${impressionism_full})` }}
       >
         <div>
-          <p className="text-center text-white font-bombay text-[32px] mt-[118px]">
+          <p className="text-center text-white font-bombay text-[46px] mt-[80px]">
             IMPRESSIONISM
           </p>
         </div>
@@ -76,7 +72,11 @@ function Impressionism() {
         <div className="flex justify-center">
           {buttonVisible && (
             <button>
-              <img className="h-[30px] mb-3" src={scrolldown} alt="swipe-button" />
+              <img
+                className="h-[30px] mb-3"
+                src={scrolldown}
+                alt="swipe-button"
+              />
             </button>
           )}
         </div>
@@ -97,20 +97,24 @@ function Impressionism() {
           }}
           partialVisibility={true}
         >
-          <p className="text-white text-m text-center font-sapphire mt-[25px]">
+          <p className="text-white text-xl text-center font-sapphire mt-[75px]">
             COCKTAIL
           </p>
         </VisibilitySensor>
-        <div className="w-3/4 mx-auto flex flex-col items-center justify-between h-full mb-3">
-          <p className="text-center text-white font-bombay text-3xl md:text-4xl mt-10">
+        <div className="w-3/4 mx-auto flex flex-col items-center justify-between h-[70%] mb-3">
+          <p className="text-center text-white font-bombay text-3xl md:text-5xl mt-10">
             IMPRESSIVE <br /> BOMBAY & TONIC
           </p>
           <img src={coctail} className="recptimg" alt="coctail" />
           <p className="text-white text-m font-sapphire text-center mb-10">
-            BOMBAY SAPPHIRE 50 ml<br />
-            Premium tonic water 100 ml<br />
-            2 lemon wedges<br />
-            3 thyme or lemon thyme sprigs<br />
+            BOMBAY SAPPHIRE 50 ml
+            <br />
+            Premium tonic water 100 ml
+            <br />
+            2 lemon wedges
+            <br />
+            3 thyme or lemon thyme sprigs
+            <br />
             Ice
           </p>
         </div>

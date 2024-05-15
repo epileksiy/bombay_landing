@@ -68,8 +68,8 @@ function Artnov() {
         style={{ backgroundImage: `url(${impressionism_full})` }}
       >
         <div>
-          <p className="text-center text-white font-bombay text-[32px] mt-[118px]">
-            Art Nouveau
+          <p className="text-center text-white font-bombay text-[46px] mt-[80px]">
+            ART NOUVEAU
           </p>
         </div>
 

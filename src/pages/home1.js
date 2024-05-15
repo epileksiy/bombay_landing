@@ -51,7 +51,8 @@ function Home() {
           playsInline
           webkit-playsinline
           className="w-full h-full object-cover"
-          src={videoBackground} type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'"
+          src={videoBackground}
+          type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'"
         />
       </div>
       <div className="z-10 flex justify-center">
@@ -60,11 +61,20 @@ function Home() {
 
       <div className="flex z-10 overflow-x-scroll pb-10 hide-scroll-bar">
         <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 items-center">
-
           <VisibilitySensor onChange={(isVisible) => onChange(isVisible, 0)}>
             <div className="inline-block">
-              <p className="text-white font-bombay text-[58px] leading-none text-center mr-5 w-[294px]">
-                CHOOSE<br />INSPIRING<br />ART AND<br />GET YOUR<br />COCKTAILE<br />RECIPE
+              <p className="text-white font-bombay text-[58px] leading-none text-center mr-5 w-[368px]">
+                CHOOSE
+                <br />
+                INSPIRING
+                <br />
+                ART AND
+                <br />
+                GET YOUR
+                <br />
+                COCKTAILE
+                <br />
+                RECIPE
               </p>
             </div>
           </VisibilitySensor>
@@ -84,17 +94,16 @@ function Home() {
           <VisibilitySensor onChange={(isVisible) => onChange(isVisible, 4)}>
             <Card data={data[3]} ref={(el) => (cardRefs.current[3] = el)} />
           </VisibilitySensor>
-
         </div>
       </div>
 
       <div className="flex justify-center mb-3.5 h-10 z-10">
-        {activeCardIndex>0
-          ? <IndicatorDots activeIndex={activeCardIndex}/>
-          : <img src={gif} alt="gif" className="w-10 h-full" />
-        }
+        {activeCardIndex > 0 ? (
+          <IndicatorDots activeIndex={activeCardIndex} />
+        ) : (
+          <img src={gif} alt="gif" className="w-12 mt-[-72px] h-12" />
+        )}
       </div>
-
     </div>
   );
 }

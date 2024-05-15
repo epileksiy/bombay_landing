@@ -45,11 +45,7 @@ function Suprematism() {
         <div className="fixed top-5 left-5">
           {cocktailVisible ? (
             <button onClick={() => handleClick(firstDivRef)}>
-              <img
-                className="h-[30px]"
-                src={back}
-                alt="back-button-scroll"
-              />
+              <img className="h-[30px]" src={back} alt="back-button-scroll" />
             </button>
           ) : (
             <Link to="/home">
@@ -69,7 +65,7 @@ function Suprematism() {
         style={{ backgroundImage: `url(${impressionism_full})` }}
       >
         <div>
-          <p className="text-center text-white font-bombay text-[32px] mt-[118px]">
+          <p className="text-center text-white font-bombay text-[46px] mt-[80px]">
             SUPREMATISM
           </p>
         </div>
@@ -77,7 +73,11 @@ function Suprematism() {
         <div className="flex justify-center">
           {buttonVisible && (
             <button>
-              <img className="h-[30px] mb-3" src={scrolldown} alt="swipe-button" />
+              <img
+                className="h-[30px] mb-3"
+                src={scrolldown}
+                alt="swipe-button"
+              />
             </button>
           )}
         </div>
@@ -108,10 +108,14 @@ function Suprematism() {
           </p>
           <img src={coctail} className="recptimg" alt="coctail" />
           <p className="text-white text-m font-sapphire text-center mb-10">
-            BOMBAY SAPPHIRE 50 ml<br />
-            Premium tonic water 100 ml<br />
-            2 pink grapefruit wedges<br />
-            2 fresh rosemary sprigs<br />
+            BOMBAY SAPPHIRE 50 ml
+            <br />
+            Premium tonic water 100 ml
+            <br />
+            2 pink grapefruit wedges
+            <br />
+            2 fresh rosemary sprigs
+            <br />
             Ice
           </p>
         </div>
