@@ -3,13 +3,14 @@ import backgroundImage from "../images/background.png";
 import logo from "../images/logo.png";
 import gif from "../images/01-Swipe left.gif";
 import Card from "../Card"; 
-import impressionism from "../images/impres.png";
-import suprematism from "../images/spreme.png";
-import artnov from "../images/arrt.png";
-import classicism from "../images/classss.png";
+import impressionism from "../images/Impressionism banner.png";
+import suprematism from "../images/Suprematism banner.png";
+import artnov from "../images/Art Nouveau banner.png";
+import classicism from "../images/Classicism banner.png";
 import VisibilitySensor from "react-visibility-sensor";
 import IndicatorDots from './IndicatorDots'
 import { isVisible } from "@testing-library/user-event/dist/utils";
+import videoBackground from '../images/bgvideo.mp4';
 
 function Home() {
 
@@ -39,11 +40,25 @@ function Home() {
       className="flex flex-col bg-cover bg-center min-h-dvh justify-between"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
+        <img src={logo} alt="logo" className="w-52 mt-5" />
+      </div> */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          webkit-playsinline
+          className="w-full h-full object-cover"
+          src={videoBackground} type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'"
+        />
+      </div>
+      <div className="z-10 flex justify-center">
         <img src={logo} alt="logo" className="w-52 mt-5" />
       </div>
 
-      <div className="flex overflow-x-scroll pb-10 hide-scroll-bar">
+      <div className="flex z-10 overflow-x-scroll pb-10 hide-scroll-bar">
         <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 items-center">
 
           <VisibilitySensor onChange={(isVisible) => onChange(isVisible, 0)}>
@@ -73,7 +88,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center mb-3.5 h-10">
+      <div className="flex justify-center mb-3.5 h-10 z-10">
         {activeCardIndex>0
           ? <IndicatorDots activeIndex={activeCardIndex}/>
           : <img src={gif} alt="gif" className="w-10 h-full" />
