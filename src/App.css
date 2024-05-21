@@ -1,6 +1,6 @@
 .card-container {
-    width: calc(33.33vh); /* 1/3 of viewport width minus margins */ /* Квадратный аспект-рацио */
-  }
+    width: calc(80vw);
+}
   
 .card-image {
     width: 100%;
